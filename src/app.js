@@ -4,6 +4,7 @@ const hbs = require("hbs");
 const geocode = require("./utils/geocode");
 const getWeatherReport = require("./utils/getWeatherReport");
 
+const port = process.env.PORT || 3000;
 const app = express();
 
 const publicDirPath = path.join(__dirname, "../public");
@@ -78,6 +79,6 @@ app.get("/*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is listening port 3000!");
+app.listen(port, () => {
+  console.log(`Server is listening port ${port}!`);
 });

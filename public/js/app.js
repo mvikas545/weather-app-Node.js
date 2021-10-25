@@ -57,11 +57,9 @@ form.addEventListener("submit", (e) => {
     btnText.classList.add("transparent");
     submitBtn.classList.add("button--loading");
     search.classList.remove("error-highlight");
-    fetch(`http://localhost:3000/weather?address=${search.value}`).then(
-      (response) => {
-        response.json().then(setDataHandler);
-      }
-    );
+    fetch(`/weather?address=${search.value}`).then((response) => {
+      response.json().then(setDataHandler);
+    });
   } else {
     search.classList.add("error-highlight");
   }
