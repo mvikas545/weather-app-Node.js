@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+   {{>header}}
+   <div class="input-form">
+       <img src="/img/weather-background.svg" alt="background" width="600px" height="450px">
+       <div class="form-container">
+       <form action="#">
+           <input type="text" placeholder="Enter location" />
+         <button class="button">
+              <span class="button__text">Search</span>
+        </button>
+       </form>
+       <div class="invalid-search hide">
+           <h1>Invalid search</h1>
+           <p>Please enter valid address.</p>
+       </div>
+       <div class="slogan ">
+           <h1>Weather.io</h1>
+           <p>Get your current weather forecast.</p>
+       </div>
+       <div class="card hide">
+           <div class="card-header">
+               <h3>Today's weather</h3>
+               <hr>
+               <h1 id='region'>Varanasi, India</h1>
+               <h3 id="country">Uttarpradesh</h3>
+               <p id="date">2021-Oct-24</p>
+               <hr>
+           </div>
+           <div class="card-body">
+               <div class="left">
+                   <img src="/img/cloudy.png" id="weather-icon" width="90" height="90" style="border-radius: 50%;">
+                   <h3 id="weather-description">Cloudy</h3>
+               </div>
+               <div class="center">
+                   <div class="temp">
+                   <h1 id="temp">22</h1>
+                   <h1 > &#8451;</h1>
+                   </div>
+               </div>
+               <div class="right">
+                   <p id="wind-speed">Wind: 74 kmph</p>
+                   <p id="precip">Precip: 0 mm</p>
+                   <p id="pressure">Pressure: 1011 mb</p>
+               </div>
+           </div>
+       </div>
+       </div>
+   </div>
+   {{>footer}}
+    </div>
+<script src="/js/app.js"></script>
+
+</body>
+</html>
